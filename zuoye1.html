@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .biao{
+            color: red;
+        }
+        .zong{
+            width:450px;
+        }
+        .tj{
+            float: left;
+            margin-left: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 >毕业生信息</h1>
+   <form>
+       <fieldset class="zong">
+           <legend class="biao">学生信息</legend>
+           姓&nbsp;&nbsp;名 <input type="text" name="name1"  required   placeholder="请输入姓名"  autofocus="autofocus"/>
+           <span class="biao">*</span>
+           <br/>
+           学&nbsp;&nbsp;号 <input type="number" name="number1"  required   placeholder="请输入学号" />
+           <span class="biao">*</span>
+           <br/>
+           手&nbsp;&nbsp;机 <input type="tel" name="tel1"  required   placeholder="请输入手机号" />
+           <span class="biao">*</span>
+           <br/>
+           邮&nbsp;&nbsp;箱 <input type="email" name="email1"  required   placeholder="请输入邮箱地址" />
+           <span class="biao">*</span>
+           <br/>
+       </fieldset><br/>
+       <fieldset class="zong">
+            <legend class="biao">录取情况</legend>
+            录取学校 <input type="search" name="search1" /><br/>
+            入学成绩 <input type="number" name="number1"/><br/>
+            入学时间 <input type="date" name="date1"/><br/>           
+       </fieldset>
+       <input type="submit" value="提交" class="tj">
+   </form>
+</body>
+</html>
