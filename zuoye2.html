@@ -108,7 +108,15 @@
        localStorage.clear();
        var dd=document.getElementById('dd');
        loadStorage('dd');
-       dd.innerHTML=" ";
+       dd.innerHTML="";
    }
+
+      window.onload=function(){
+            var div1=document.getElementById("dd");
+            for(var i=0;i<localStorage.length;i++){
+                var y='<div id="s">'+localStorage.getItem(localStorage.key(i));+'</div>';
+                div1.innerHTML+=y;
+            }
+        }
 </script>
 </html>
