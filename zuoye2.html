@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .aa{
+            width: 200px;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+         .aa:focus{
+             outline: none;
+             border:2px solid #ebb463;
+         }
+         .bb{
+             width: 150px;
+             height: 38px;
+             color: #b4aeaa;
+         }
+         .dd
+         {
+             width: 355px;
+             height: 80px;
+            
+             margin-left: 5px;
+             overflow: hidden;
+             float: left;
+         }
+         .cc
+         {
+             margin-left: 5px;
+         }
+         .div
+         {
+             width: 400px;
+             height: 200px; 
+             border: 1px solid #b4aeaa;
+         }
+         #s{
+             background-color:#e0e0e0;
+             height: 25px;
+             width:fit-content;
+             margin-left: 10px;
+             float: left;
+            margin-top: 15px;
+         }
+         .e
+         {
+             background-color: #e0e0e0;
+             color: white;
+             width: 23px;
+             height: 23px;
+             float: right;
+             font-weight: bolder;
+             text-align: center ;
+             margin-right: 10px;
+             cursor: pointer;
+             margin-top: 70px;
+         }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <form>
+          <input name="search" class="aa" id="aa" type="text"  placeholder="请输入想查找的商品" autofocus>
+          <input type="button" value="搜索"  class="bb" onclick="fun('aa')">
+        </form>
+        <div class="cc">最近搜索</div>
+        <div class="dd" id="dd">
+        </div>    
+        <div id="e" class="e" onclick="clearStorage('dd')">X</div>
+    </div>
+    
+</body>
+<script>
+   
+   function fun(id)
+   {
+       var data=document.getElementById(id).value;
+       var time=new Date().getTime();
+       localStorage.setItem(time,data);
+       loadStorage('dd');
+   }
+   function loadStorage(id)
+   {     
+   
+        for(var i=0;i<localStorage.length;i++)
+        { 
+            var result='<div id="s">';
+           var key=localStorage.key(i);
+           var value=localStorage.getItem(key);
+           var date=new Date();
+           date.setTime(key);
+           result+=value;
+           result+='</div>';
+        }
+       
+        var target=document.getElementById(id);  
+        target.innerHTML+=result;
+}
+   function clearStorage(){
+       
+       alert("是否清除全部数据？");
+       localStorage.clear();
+       var dd=document.getElementById('dd');
+       loadStorage('dd');
+       dd.innerHTML=" ";
+   }
+</script>
+</html>
