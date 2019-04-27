@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="400px" height="250px"></canvas>
+</body>
+<script>
+     var arr=['"img/1.JPG"','"img/2.JPG"','"img/3.JPG"','"img/4.JPG"','"img/5.JPG"'];
+     var canvas=document.getElementById("canvas");
+     var context=canvas.getContext("2d");
+     var width=400;
+     var height=250;
+     function fun(){
+        var a=Math.floor(Math.random()*5);
+        return a;
+     }
+     var b=fun();
+	 var width = 400;
+	 var height = 250;
+     window.onload=function()
+     {
+			context.fillStyle = '#ddd';
+			context.fillRect(0, 0, width, height); 
+			var img=arr[b];
+			console.log(img);
+			canvas.style.background = 'url('+img+') no-repeat center';
+			canvas.style.backgroundSize = "100% 100%";	
+			context.lineWidth = 20;
+			context.lineJoin = "round";
+     }
+		canvas.addEventListener('mousedown', mousedown, false);
+		canvas.addEventListener('mousemove', mousemove, false);
+		canvas.addEventListener('mouseup', mouseup, false);
+		var Draw; 
+		var X=0;
+		var Y=0; 
+		function mousedown(e){
+			 Draw = true;
+		     X = e.layerX;
+	         Y = e.layerY;
+		}
+		function mousemove(e){
+			if(Draw){
+			var a = e.layerX;
+			var b = e.layerY;
+			context.globalCompositeOperation = "destination-out"; 
+			context.beginPath();
+			context.moveTo(X, Y);
+			context.lineTo(a, b);
+			context.closePath(); 
+			context.stroke();
+		    X = a;
+			Y = b; 
+			} 
+		}
+		function mouseup(e){
+			Draw = false;
+			var data = context.getImageData(0, 0, width, height).data;
+			var length = data.length;
+			var j = 0;
+			for (var i = 0; i < length - 3; i += 4) {
+				if (data[i] == 0 && data[i + 1] == 0 && data[i + 2] == 0 && data[i + 3] == 0) {
+					j++;
+				}
+			}
+			if(j>width*height*0.85){
+				 context.fillStyle = "blue";
+				 context.fillRect(0, 0, width, height);
+			}
+		}
+</script>
+</html>
