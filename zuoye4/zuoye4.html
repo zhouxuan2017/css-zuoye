@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 280px;
+            height: 350px;
+            box-shadow: 2px 2px 2px 2px #9e9b9bb4;
+            position: relative;
+        }
+        .a {
+            width: 280px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .a img {
+            height: 200px;
+            width: 280px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: relative;
+            z-index: 1;
+            transition-property: all;
+            transition-timing-function: ease;
+        }
+        .img {
+            max-width: 280px;
+            max-height: 200px;
+            height: 180px;
+            transform: scale(1, 1);
+        }
+        .aa {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 200px;
+            background: #696767b4;
+            opacity: 0;
+            transition-property: opacity;
+            transition-timing-function: ease-in;
+            z-index: 200;
+        }
+        .container:hover img {
+            transform: scale(1.4, 1.4);
+            transition-property: transform;
+            transition-duration: 0.5s;
+        }
+        .container:hover .aa {
+            opacity: 0.8;
+        }
+        .circle {
+            z-index: 9999;
+            width: 40px;
+            height: 40px;
+            background: rgb(245, 125, 27);
+            position: absolute;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            margin-top: -180px;
+            margin-left: 225px;
+            float: left;
+            font-size: 3px;
+            line-height: 12px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            padding-top: -7px;
+        }
+        .b {
+            width: 280px;
+            height: 120px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .span-test {
+            z-index: 800;
+            overflow: hidden;
+            display: block;
+            height: 120px;
+            width: 280px;
+            background: rgb(255, 255, 255);
+            transition: all 0.5s;
+            position: relative;
+        }
+        .span-test:hover {
+            height: 220px;
+        }
+        .span-test:hover .pp {
+            display: block;
+        }
+        .span-test:hover .dda {
+            background: rgb(241, 241, 190);
+            opacity: 0.5;
+        }
+        .d {
+            position: absolute;
+            z-index: 800;
+            color: white;
+            background: rgb(245, 125, 27);
+            width: 40px;
+            float: left;
+            height: 20px;
+            font-size: 6px;
+            text-align: center;
+            line-height: center;
+        }
+        .dda {
+            background: linear-gradient(#7e5189, #935e75, #7175c4);
+            height: 20px;
+            width: 280px;
+            float: left;
+        }
+        .da {
+            margin-left: 10px;
+            margin-top: 35px;
+        }
+
+        h1 {
+            font-weight: 10000;
+            font-size: 16px;
+        }
+        h2 {
+            color: rgb(245, 125, 27);
+            font-size: 14px;
+        }
+        .pp {
+            font-size: 13px;
+            margin-top: -13px;
+            display: none;
+            line-height: 22px;
+        }
+        #c {
+            width: 280px;
+            height: 30px;
+        }
+        span {
+            padding-left: 20px;
+            font-size: 10px;
+            font-weight: 550;
+            color: #9e9b9bb4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a">
+            <img src="zhanqiao.jpg">
+            <div class="circle">
+                <p>15<br>五月</p>
+            </div>
+            <div class="aa"></div>
+        </div>
+        <div class="b">
+            <div class="span-test">
+                <div class="d">照片</div>
+                <div class="dda"></div>
+                <div class="da">
+                    <h1>青岛栈桥</h1>
+                    <h2>国家AAAA级旅游景区</h2>
+                    <p class="pp">
+                        青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠路游船，由此乘船可看海上青岛。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="c"><span>10分钟前 &nbsp;&nbsp;&nbsp;123评论</span></div>
+    </div>
+</body>
+</html>
