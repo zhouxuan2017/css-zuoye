@@ -1,0 +1,288 @@
+.body
+{
+    background-color: #dddddd;
+   
+}
+.w a:hover
+{
+    cursor:pointer;
+}
+.y2
+{
+    display: none;
+}
+.div1
+{
+    float: right;
+    line-height: 25px;
+}
+.header{
+    border-top: 2px solid  white;
+    width: 100%;
+    height: 30px;
+    background-color: #282828;
+    color: white;
+}
+.header1 {
+    margin-right: 112px;
+    float: right;
+    margin-top: 2px;
+}
+
+.ts
+{ 
+  background-color: white;
+  opacity: 0.7;
+}
+
+
+.tt li{
+    float: left;
+    margin-left: 20px;
+}
+.tt a{
+    color: #000000;
+    margin-top: 10px;
+}
+.tt a:hover{
+    color:#cb5405 ;
+    border-bottom: 3px solid #cb5405;
+}
+.pp{
+    background-color: #16316d;
+    color: white;
+    height: 385px;
+}
+.ppp2
+{
+    float: left;
+    margin-left:100px;
+    margin-top: 40px;
+}
+.ppp1
+{
+   margin-top: 20px;
+    color: white;
+}
+.ppp{
+  display: none;
+}
+.r
+{
+    display: none;
+}
+.bb
+{
+    display: none;   
+    background-color: white;
+}
+.e
+{
+    height: 345px;
+    width: 100%;
+}
+.e1
+{
+    width: 100%;
+}
+.f1
+{
+    background: url('../img/back.png') no-repeat;
+}
+.f2
+{
+     background: url('../img/back.png') no-repeat;
+}
+.fff{
+    display: none;
+}
+.aq2{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.f4
+{
+    background-color: #1c5080;
+    color: white;
+    height: 380px;
+   padding-top: 50px;
+}
+.m
+{
+    height: 60px;  
+    display: none;
+}
+.hh
+{
+    background-color:#1c5080;
+    color: white;
+}
+.hh h4{
+    color: white;   
+}
+.hh1
+{
+    color: black;
+}
+.hh div{  
+    background: url('../img/rorate.png') no-repeat 120px 40px;
+}
+.hh img{
+    margin-top: 100px;
+    margin-left: 173px;
+}
+.ha{
+    display: none;   
+}
+.ha div{   
+    border: solid 1px #e8e8e8;
+}
+.ha ul{
+  list-style: none;
+   margin-left: 60px;
+  float: left;
+  margin-top: -50px;
+}
+.ha img{
+    margin-top: 30px;
+}
+.i
+{
+    background-color: #000000;
+    color:#dddddd;
+}
+.j
+{
+    
+    background-color: #000000;
+    color:#dddddd;
+    line-height: 100px;
+}
+.jj{
+   
+    background-color: #000000;
+    color:#dddddd;
+    display: none;
+}
+@media screen and (max-width:670px)
+{
+    .i{
+        display: none;       
+    }
+    .j{
+        display: none;
+    }
+    .jj{
+        display: block;
+        background-color: #000000;
+    }
+    .gg{
+       
+        width: 100%;
+        max-width: 800px;
+    }
+   
+   .hh{
+       display: none;
+   }
+   .ha
+   {
+       display: block;
+       background-color: white;
+   }
+   .m{
+       display: block;
+   }
+.e{
+    display: none;
+    margin-top: 30px;
+}
+.d{
+   
+    background-color: white;  
+}
+body
+{
+    background-color: #f5f5f5;
+}
+.cc1
+{
+    display: none;
+}
+.bb {
+    display: block;
+}
+.r{
+    display: block;
+}
+.aaaa
+{
+    display: none;
+}
+.k{
+    display: none;
+}
+.pa1{
+    display: none;
+}
+.pp{
+    display: block;
+}
+html
+{
+    font-size: 125%!important;
+}
+.ff
+{
+    display: none;
+}
+.fff
+{
+    display: block;
+}
+.f4{
+    background-color: white;
+    color: black;
+    margin-top: 0;
+}
+.f1{
+    display: none;
+}
+.ppp{
+    display: block;
+    background-color: white;
+}
+.header{
+    display: none;
+}
+.tt li{
+    float: none; 
+   
+}
+.ts{
+    opacity: 1;
+}
+.aq
+{
+  margin-bottom: 20px;
+}
+.aq1
+{
+    padding-top: 40px;
+    background-color: white
+}
+.aq2
+{
+    padding-top: 40px;
+    background-color: white;
+    padding-bottom:40px;
+    margin: 0;
+}
+.y1
+{
+    display: none;
+}
+.y2{
+    display: block;
+}
+}
